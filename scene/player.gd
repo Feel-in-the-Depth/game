@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var jump_sfx = $AudioStreamPlayer
+
 const speed = 350
 const jump_velocity = -500.0
 
@@ -11,6 +13,7 @@ func _physics_process(delta: float) -> void:
 		
 	if Input.is_action_just_pressed("_jump") and is_on_floor():
 		velocity.y = jump_velocity
+		jump_sfx.play()
 		
 	var direction = Input.get_axis( "_mleft", "_mright")
 	if direction:
