@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlln2g1mvodvy"]
+
+[ext_resource type="Script" uid="uid://dd1i5kwrm2dsn" path="res://scene/dialog_area.gd" id="1_7gxxi"]
+
+[node name="dialog_area" type="Area2D"]
+process_mode = 3
+light_mask = 0
+visibility_layer = 2
+script = ExtResource("1_7gxxi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_DialogArea_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_DialogArea_area_exited"]

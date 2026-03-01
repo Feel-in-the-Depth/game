@@ -1,11 +1,10 @@
-[gd_scene format=3 uid="uid://nugt3pnh5xsb"]
+[gd_scene load_steps=9 format=3 uid="uid://nugt3pnh5xsb"]
 
 [ext_resource type="Script" uid="uid://b6u40tv1dxomt" path="res://script/player.gd" id="1_hjaqi"]
 [ext_resource type="Texture2D" uid="uid://cfuxcq881ln7p" path="res://character/1772266025477.png" id="1_xo3ru"]
 [ext_resource type="Texture2D" uid="uid://2h7ucai2xls4" path="res://character/1772266025467.png" id="3_s4jxa"]
 [ext_resource type="Texture2D" uid="uid://btqmoys53nilk" path="res://character/1772266025473.png" id="4_oh5ij"]
 [ext_resource type="Texture2D" uid="uid://bblwvs3kpolak" path="res://character/1772266025470.png" id="5_hp4bs"]
-[ext_resource type="AudioStream" uid="uid://kwjyfwn4mnng" path="res://asset/audio/jumpsfx.wav" id="6_oh5ij"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hjaqi"]
 animations = [{
@@ -43,18 +42,26 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fvtld"]
 size = Vector2(24, 6)
 
-[node name="player" type="CharacterBody2D" unique_id=859600368]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s4jxa"]
+size = Vector2(40, 104)
+
+[node name="player" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_hjaqi")
 
-[node name="spritebody" type="AnimatedSprite2D" parent="." unique_id=1322122515]
+[node name="spritebody" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hjaqi")
 animation = &"jump"
 frame_progress = 0.7042677
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2038127823]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 45)
 shape = SubResource("RectangleShape2D_fvtld")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1712576328]
-stream = ExtResource("6_oh5ij")
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+light_mask = 2
+visibility_layer = 0
+position = Vector2(2, -6)
+shape = SubResource("RectangleShape2D_s4jxa")

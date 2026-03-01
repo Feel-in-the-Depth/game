@@ -191,9 +191,6 @@ texture = ExtResource("3_hpyso")
 [sub_resource type="TileSet" id="TileSet_u8upw"]
 sources/0 = SubResource("TileSetAtlasSource_h12bw")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rv4fw"]
-size = Vector2(79.5, 192)
-
 [sub_resource type="GDScript" id="GDScript_tumr8"]
 script/source = "extends Area2D
 
@@ -211,8 +208,11 @@ func _on_area_exited(area: Area2D) -> void:
 func _process(delta: float) -> void:
 	if entered == true:
 		if Input.is_action_just_pressed(\"_interact\"):
-			get_tree().change_scene_to_file(\"res://scene/classroom.tscn\")
+			get_tree().change_scene_to_file(\"res://scene/scity.tscn\")
 "
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rv4fw"]
+size = Vector2(79.5, 192)
 
 [node name="classroom" type="Node2D"]
 
@@ -238,34 +238,41 @@ texture = ExtResource("2_qbuh6")
 
 [node name="player" parent="TileMapLayer" instance=ExtResource("3_c36q4")]
 position = Vector2(-79, -27.666666)
+scale = Vector2(0.6, 0.6)
 
 [node name="CharacterBody2D" parent="TileMapLayer" instance=ExtResource("6_rv4fw")]
 position = Vector2(163.33333, -27.66667)
 scale = Vector2(0.6, 0.6)
 
+[node name="npc_2" parent="TileMapLayer/CharacterBody2D" instance=ExtResource("8_i1hle")]
+position = Vector2(-106.111115, 0.55556107)
+
 [node name="CharacterBody2D2" parent="TileMapLayer" instance=ExtResource("7_d466h")]
 position = Vector2(244.66667, -37.333336)
 scale = Vector2(0.8, 0.8)
-
-[node name="npc_2" parent="TileMapLayer" instance=ExtResource("8_i1hle")]
-position = Vector2(99.66666, -27.333332)
-scale = Vector2(0.6, 0.6)
 
 [node name="nirma" parent="TileMapLayer" instance=ExtResource("9_t4w38")]
 position = Vector2(-31.666666, -25.999998)
 scale = Vector2(0.6, 0.6)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapLayer"]
-position = Vector2(-78.666664, -33.333332)
-scale = Vector2(0.33333334, 0.33333334)
-shape = SubResource("RectangleShape2D_rv4fw")
-
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(47, -6)
 script = SubResource("GDScript_tumr8")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-281, -96)
+shape = SubResource("RectangleShape2D_rv4fw")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(294, -242)
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(-316, -22)
+scale = Vector2(1.8000001, 1.8000001)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D2"]
+position = Vector2(3.8888886, 20.555553)
+polygon = PackedVector2Array(-18.888885, 7.222222, -23.333328, -308.88885, 17.777771, -310.55554, 15, 7.222222)
 
 [connection signal="area_exited" from="Area2D" to="Area2D" method="_on_area_exited"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

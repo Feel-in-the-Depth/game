@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dscsi2pcj6e1o" path="res://Tile/Bg/bgCity.png" id="1_8plxh"]
 [ext_resource type="Texture2D" uid="uid://dikj5u2k5nb5l" path="res://Tile/TileStone.png" id="2_ia8uv"]
 [ext_resource type="PackedScene" uid="uid://nugt3pnh5xsb" path="res://scene/player.tscn" id="3_icxbh"]
-[ext_resource type="Script" uid="uid://dk0qj5v7j1fv4" path="res://scene/cts.gd" id="4_jhh55"]
+[ext_resource type="Script" uid="uid://ckrt37ydpxp0l" path="res://scene/scity.gd" id="4_8plxh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mgawb"]
 texture = ExtResource("1_8plxh")
@@ -38,7 +38,7 @@ sources/0 = SubResource("TileSetAtlasSource_i0bif")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o83er"]
 size = Vector2(139, 167.25)
 
-[node name="City" type="Node2D"]
+[node name="sCity" type="Node2D"]
 position = Vector2(374, -166.00002)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -81,7 +81,7 @@ polygon = PackedVector2Array(-26, 80, -32, -434, 46, -436, 36, 90)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-897, 107.000015)
-script = ExtResource("4_jhh55")
+script = ExtResource("4_8plxh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(733, -23)

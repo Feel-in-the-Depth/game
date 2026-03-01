@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://xyme0t5spv8p"]
+
+[ext_resource type="Script" uid="uid://dhl8b3oiy8dx7" path="res://dialogplayer.gd" id="1_qf06d"]
+
+[node name="DialogPlayer" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_qf06d")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueText" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Hello"
+
+[node name="NextButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

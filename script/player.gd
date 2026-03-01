@@ -28,3 +28,12 @@ func _physics_process(delta: float) -> void:
 	else :
 		$spritebody.play("idle")
 	move_and_slide()
+
+@onready var dialogue = $CanvasLayer
+
+func _ready():
+	dialogue.start_dialogue([
+		"...",
+		"What was that before...",
+        "... huh, Whatever."
+	]) 
