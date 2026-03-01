@@ -1,11 +1,11 @@
-[gd_scene load_steps=14 format=4 uid="uid://b5je7ucsr86yl"]
+[gd_scene load_steps=14 format=4 uid="uid://dullt2gg26dho"]
 
 [ext_resource type="Texture2D" uid="uid://dnhs41dbs0j8c" path="res://Tile/TilePlanks.png" id="1_bisa2"]
 [ext_resource type="Texture2D" uid="uid://c3ucsjesog3s5" path="res://Tile/Bg/bgRoom.png" id="2_4o3f6"]
 [ext_resource type="PackedScene" uid="uid://nugt3pnh5xsb" path="res://scene/player.tscn" id="4_v5vuv"]
 [ext_resource type="Texture2D" uid="uid://bic4jj4gm3pa5" path="res://asset/door.png" id="4_x5k2b"]
 [ext_resource type="Texture2D" uid="uid://cm573mdm4lh56" path="res://asset/bed1.png" id="5_8cv3p"]
-[ext_resource type="Script" uid="uid://bixwgkhx7sj0r" path="res://door.gd" id="6_x5k2b"]
+[ext_resource type="Script" uid="uid://bixwgkhx7sj0r" path="res://script/door.gd" id="6_x5k2b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x5k2b"]
 texture = ExtResource("2_4o3f6")
@@ -74,6 +74,20 @@ script = ExtResource("6_x5k2b")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(436.25, 6.75)
 shape = SubResource("RectangleShape2D_8cv3p")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-337, 60)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(4, 89)
+polygon = PackedVector2Array(-24, 53, -27, -320, 20, -323, 21, 52)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(499, 48)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
+position = Vector2(-1, 83)
+polygon = PackedVector2Array(-33, 68, -36, -307, 14, -304, 11, 68)
 
 [connection signal="area_exited" from="Area2D" to="Area2D" method="_on_area_exited"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

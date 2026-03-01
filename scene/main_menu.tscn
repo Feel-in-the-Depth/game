@@ -1,6 +1,31 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjbf2tgtavmgt"]
+[gd_scene load_steps=5 format=4 uid="uid://cjbf2tgtavmgt"]
 
 [ext_resource type="Script" uid="uid://dnegl0gpcqs32" path="res://script/main_menu.gd" id="1_3er1b"]
+[ext_resource type="Texture2D" uid="uid://c16egxgg0qrtc" path="res://Tile/Bg/Tak berjudul102_20260301125038.png" id="2_hxu56"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2fwvj"]
+texture = ExtResource("2_hxu56")
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_0iwki"]
+sources/0 = SubResource("TileSetAtlasSource_2fwvj")
 
 [node name="main menu" type="Node2D"]
 script = ExtResource("1_3er1b")
@@ -18,31 +43,24 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 4.42
 anchor_bottom = 1.9480001
-offset_left = 220.0
-offset_top = 100.0
-offset_right = 225.62
-offset_bottom = 76.976
+offset_left = 473.0
+offset_top = 390.0
+offset_right = 478.62
+offset_bottom = 366.976
 text = "Start"
 
 [node name="load" type="Button" parent="button_manager"]
 layout_mode = 0
-offset_left = 222.0
-offset_top = 232.0
-offset_right = 398.0
-offset_bottom = 284.0
+offset_left = 474.0
+offset_top = 475.0
+offset_right = 650.0
+offset_bottom = 527.0
 text = "Quit"
 
-[node name="quit" type="Button" parent="button_manager"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.36200002
-anchor_right = -0.36200002
-offset_left = 237.118
-offset_top = 166.0
-offset_right = 414.118
-offset_bottom = 213.0
-text = "Load"
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(5, 5)
+tile_map_data = PackedByteArray("AAAEAAEAAAAAAAEAAAAEAAIAAAAAAAIAAAAEAAMAAAAAAAMAAAAFAAEAAAABAAEAAAAFAAIAAAABAAIAAAAFAAMAAAABAAMAAAAGAAEAAAACAAEAAAAGAAIAAAACAAIAAAAHAAEAAAADAAEAAAAHAAIAAAADAAIAAAAIAAEAAAAEAAEAAAAIAAIAAAAEAAIAAAAJAAEAAAAFAAEAAAAJAAIAAAAFAAIAAAAKAAEAAAAGAAEAAAAKAAIAAAAGAAIAAAALAAEAAAAHAAEAAAALAAIAAAAHAAIAAAA=")
+tile_set = SubResource("TileSet_0iwki")
 
 [connection signal="pressed" from="button_manager/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="button_manager/load" to="." method="_on_load_pressed"]
-[connection signal="pressed" from="button_manager/quit" to="." method="_on_quit_pressed"]

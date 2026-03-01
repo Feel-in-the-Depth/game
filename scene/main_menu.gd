@@ -1,8 +1,11 @@
 extends Node2D
 
 
+
+
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://scene/room.tscn")
+	get_tree().change_scene_to_file("res://room.tscn")
+
 
 
 func _on_load_pressed() -> void:
