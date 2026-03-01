@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dscsi2pcj6e1o"
-path="res://.godot/imported/bgCity.png-515c3777ccf1f2498fc5d26e7dabe55e.ctex"
+uid="uid://clm3dlv404s78"
+path="res://.godot/imported/Tak berjudul102_20260228164042.png-f519a9c948137710f08f2431bcef72e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tile/Bg/bgCity.png"
-dest_files=["res://.godot/imported/bgCity.png-515c3777ccf1f2498fc5d26e7dabe55e.ctex"]
+source_file="res://asset/Tak berjudul102_20260228164042.png"
+dest_files=["res://.godot/imported/Tak berjudul102_20260228164042.png-f519a9c948137710f08f2431bcef72e4.ctex"]
 
 [params]
 
