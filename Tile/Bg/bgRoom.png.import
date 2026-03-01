@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnhs41dbs0j8c"
-path="res://.godot/imported/TilePlanks.png-bbe0f5171ff87e38613c8262e05308e5.ctex"
+uid="uid://c3ucsjesog3s5"
+path="res://.godot/imported/bgRoom.png-654aea964bb2b064df3de4132f50f25d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tile/TilePlanks.png"
-dest_files=["res://.godot/imported/TilePlanks.png-bbe0f5171ff87e38613c8262e05308e5.ctex"]
+source_file="res://Tile/Bg/bgRoom.png"
+dest_files=["res://.godot/imported/bgRoom.png-654aea964bb2b064df3de4132f50f25d.ctex"]
 
 [params]
 
