@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8dhfjn3jxqai"]
+
+[ext_resource type="Texture2D" uid="uid://dsvcittlde1fy" path="res://character/Tak berjudul100_20260301141006.png" id="1_fogob"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fogob")

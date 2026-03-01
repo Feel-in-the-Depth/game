@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://bwd2ljhrndkiu"]
+[gd_scene load_steps=11 format=4 uid="uid://bwd2ljhrndkiu"]
 
 [ext_resource type="Texture2D" uid="uid://dscsi2pcj6e1o" path="res://Tile/Bg/bgCity.png" id="1_ofnss"]
 [ext_resource type="Texture2D" uid="uid://dikj5u2k5nb5l" path="res://Tile/TileStone.png" id="4_4uvuk"]
@@ -37,6 +37,9 @@ sources/0 = SubResource("TileSetAtlasSource_i0bif")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o83er"]
 size = Vector2(139, 167.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mgawb"]
+size = Vector2(103, 143)
 
 [node name="City" type="Node2D"]
 position = Vector2(374, -166.00002)
@@ -86,6 +89,13 @@ script = ExtResource("4_mgawb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-9.5, -23.375)
 shape = SubResource("RectangleShape2D_o83er")
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(142, 124.000015)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(-10.5, -35.5)
+shape = SubResource("RectangleShape2D_mgawb")
 
 [connection signal="area_exited" from="Area2D" to="Area2D" method="_on_area_exited"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

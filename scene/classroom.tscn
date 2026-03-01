@@ -1,9 +1,14 @@
-[gd_scene load_steps=8 format=4 uid="uid://ceelsdwwhc33e"]
+[gd_scene load_steps=18 format=4 uid="uid://ceelsdwwhc33e"]
 
 [ext_resource type="Texture2D" uid="uid://dnhs41dbs0j8c" path="res://Tile/TilePlanks.png" id="1_otxj7"]
 [ext_resource type="Texture2D" uid="uid://bic4jj4gm3pa5" path="res://asset/door.png" id="2_qbuh6"]
 [ext_resource type="PackedScene" uid="uid://nugt3pnh5xsb" path="res://scene/player.tscn" id="3_c36q4"]
-[ext_resource type="Script" uid="uid://46diyye16fda" path="res://sdoor.gd" id="4_7j6aw"]
+[ext_resource type="Texture2D" uid="uid://k4hx2ynt1d3s" path="res://asset/Tak berjudul102_20260301145228.png" id="3_hpyso"]
+[ext_resource type="Texture2D" uid="uid://dkrrbwygfj6tn" path="res://Tile/Bg/Tak berjudul103_20260301140000.png" id="4_qbuh6"]
+[ext_resource type="PackedScene" uid="uid://c8dhfjn3jxqai" path="res://scene/npc_1.tscn" id="6_rv4fw"]
+[ext_resource type="PackedScene" uid="uid://cp3ifk2cmax6c" path="res://scene/teacher.tscn" id="7_d466h"]
+[ext_resource type="PackedScene" uid="uid://qn4m5lrl3q3k" path="res://scene/npc_2.tscn" id="8_i1hle"]
+[ext_resource type="PackedScene" uid="uid://c7yrcounv32m3" path="res://scene/nirma.tscn" id="9_t4w38"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hiu75"]
 texture = ExtResource("1_otxj7")
@@ -34,8 +39,180 @@ texture = ExtResource("1_otxj7")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_hiu75")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c36q4"]
+texture = ExtResource("4_qbuh6")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_7j6aw"]
+sources/0 = SubResource("TileSetAtlasSource_c36q4")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h12bw"]
+texture = ExtResource("3_hpyso")
+4:2/0 = 0
+3:2/0 = 0
+3:3/0 = 0
+2:3/0 = 0
+2:2/0 = 0
+5:2/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_u8upw"]
+sources/0 = SubResource("TileSetAtlasSource_h12bw")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rv4fw"]
 size = Vector2(79.5, 192)
+
+[sub_resource type="GDScript" id="GDScript_tumr8"]
+script/source = "extends Area2D
+
+var entered = false
+
+
+
+func _on_body_entered(body: Node2D) -> void:
+	entered = true
+
+
+func _on_area_exited(area: Area2D) -> void:
+	entered = false
+
+func _process(delta: float) -> void:
+	if entered == true:
+		if Input.is_action_just_pressed(\"_interact\"):
+			get_tree().change_scene_to_file(\"res://scene/classroom.tscn\")
+"
 
 [node name="classroom" type="Node2D"]
 
@@ -45,7 +222,14 @@ scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAD+/wAAAAAAAAAAAAD+/wEAAAAAAAEAAAD//wAAAAABAAAAAAD//wEAAAABAAEAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAEAAAABAAAAAAABAAAAAAABAAEAAAABAAEAAAACAAAAAAAAAAAAAAACAAEAAAAAAAEAAAADAAAAAAABAAAAAAADAAEAAAABAAEAAAAEAAAAAAAAAAAAAAAEAAEAAAAAAAEAAAAFAAAAAAABAAAAAAAFAAEAAAABAAEAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAEAAAAHAAAAAAAAAAAAAAAHAAEAAAAAAAEAAAAIAAAAAAABAAAAAAAIAAEAAAABAAEAAAAJAAAAAAAAAAAAAAAJAAEAAAAAAAEAAAAKAAAAAAABAAAAAAAKAAEAAAABAAEAAAALAAAAAAAAAAAAAAALAAEAAAAAAAEAAAAMAAAAAAABAAAAAAAMAAEAAAABAAEAAAANAAAAAAAAAAAAAAANAAEAAAAAAAEAAAAOAAAAAAABAAAAAAAOAAEAAAABAAEAAAD8/wAAAAAAAAAAAAD8/wEAAAAAAAEAAAD9/wAAAAABAAAAAAD9/wEAAAABAAEAAAD6/wAAAAAAAAAAAAD6/wEAAAAAAAEAAAD7/wAAAAABAAAAAAD7/wEAAAABAAEAAAAPAAAAAAAAAAAAAAAPAAEAAAAAAAEAAAAQAAAAAAABAAAAAAAQAAEAAAABAAEAAAARAAAAAAAAAAAAAAARAAEAAAAAAAEAAAASAAAAAAABAAAAAAASAAEAAAABAAEAAAA=")
 tile_set = SubResource("TileSet_hpyso")
 
+[node name="TileMapLayer" type="TileMapLayer" parent="TileMapLayer"]
+scale = Vector2(1.5, 1.5)
+tile_map_data = PackedByteArray("AAD8//j/AAAAAAAAAAD8//n/AAAAAAEAAAD8//r/AAAAAAIAAAD8//v/AAAAAAMAAAD8//z/AAAAAAQAAAD8//3/AAAAAAUAAAD8//7/AAAAAAYAAAD8////AAAAAAcAAAD9//j/AAABAAAAAAD9//n/AAABAAEAAAD9//r/AAABAAIAAAD9//v/AAABAAMAAAD9//z/AAABAAQAAAD9//3/AAABAAUAAAD9//7/AAABAAYAAAD9////AAABAAcAAAD+//j/AAACAAAAAAD+//n/AAACAAEAAAD+//r/AAACAAIAAAD+//v/AAACAAMAAAD+//z/AAACAAQAAAD+//3/AAACAAUAAAD+//7/AAACAAYAAAD+////AAACAAcAAAD///j/AAADAAAAAAD///n/AAADAAEAAAD///r/AAADAAIAAAD///v/AAADAAMAAAD///z/AAADAAQAAAD///3/AAADAAUAAAD///7/AAADAAYAAAD/////AAADAAcAAAAAAPj/AAAEAAAAAAAAAPn/AAAEAAEAAAAAAPr/AAAEAAIAAAAAAPv/AAAEAAMAAAAAAPz/AAAEAAQAAAAAAP3/AAAEAAUAAAAAAP7/AAAEAAYAAAAAAP//AAAEAAcAAAABAPj/AAAFAAAAAAABAPn/AAAFAAEAAAABAPr/AAAFAAIAAAABAPv/AAAFAAMAAAABAPz/AAAFAAQAAAABAP3/AAAFAAUAAAABAP7/AAAFAAYAAAABAP//AAAFAAcAAAACAPj/AAAGAAAAAAACAPn/AAAGAAEAAAACAPr/AAAGAAIAAAACAPv/AAAGAAMAAAACAPz/AAAGAAQAAAACAP3/AAAGAAUAAAACAP//AAAGAAcAAAADAPj/AAAHAAAAAAADAPn/AAAHAAEAAAADAPr/AAAHAAIAAAADAPv/AAAHAAMAAAADAPz/AAAHAAQAAAADAP3/AAAHAAUAAAADAP7/AAAHAAYAAAADAP//AAAHAAcAAAAEAPj/AAAIAAAAAAAEAPn/AAAIAAEAAAAEAPr/AAAIAAIAAAAEAPv/AAAIAAMAAAAEAPz/AAAIAAQAAAAEAP3/AAAIAAUAAAAEAP7/AAAIAAYAAAAEAP//AAAIAAcAAAAFAPj/AAAJAAAAAAAFAPn/AAAJAAEAAAAFAPr/AAAJAAIAAAAFAPv/AAAJAAMAAAAFAPz/AAAJAAQAAAAFAP3/AAAJAAUAAAAFAP7/AAAJAAYAAAAFAP//AAAJAAcAAAAGAPj/AAAKAAAAAAAGAPn/AAAKAAEAAAAGAPr/AAAKAAIAAAAGAPv/AAAKAAMAAAAGAPz/AAAKAAQAAAAGAP3/AAAKAAUAAAAGAP7/AAAKAAYAAAAGAP//AAAKAAcAAAAHAPj/AAALAAAAAAAHAPn/AAALAAEAAAAHAPr/AAALAAIAAAAHAPv/AAALAAMAAAAHAPz/AAALAAQAAAAHAP3/AAALAAUAAAAHAP7/AAALAAYAAAAHAP//AAALAAcAAAAIAPj/AAAMAAAAAAAIAPn/AAAMAAEAAAAIAPr/AAAMAAIAAAAIAPv/AAAMAAMAAAAIAPz/AAAMAAQAAAAIAP3/AAAMAAUAAAAIAP7/AAAMAAYAAAAIAP//AAAMAAcAAAAJAPj/AAANAAAAAAAJAPn/AAANAAEAAAAJAPr/AAANAAIAAAAJAPv/AAANAAMAAAAJAPz/AAANAAQAAAAJAP3/AAANAAUAAAAJAP7/AAANAAYAAAAJAP//AAANAAcAAAAKAPj/AAAOAAAAAAAKAPn/AAAOAAEAAAAKAPr/AAAOAAIAAAAKAPv/AAAOAAMAAAAKAPz/AAAOAAQAAAAKAP3/AAAOAAUAAAAKAP7/AAAOAAYAAAAKAP//AAAOAAcAAAALAPj/AAAPAAAAAAALAPn/AAAPAAEAAAALAPr/AAAPAAIAAAALAPv/AAAPAAMAAAALAPz/AAAPAAQAAAALAP3/AAAPAAUAAAALAP7/AAAPAAYAAAALAP//AAAPAAcAAAACAP7/AAAGAAYAAAA=")
+tile_set = SubResource("TileSet_7j6aw")
+
 [node name="object" type="TileMapLayer" parent="TileMapLayer"]
+tile_map_data = PackedByteArray("AAD9//3/AAACAAEAAAD9//7/AAACAAIAAAD9////AAACAAMAAAD+//3/AAADAAEAAAD+//7/AAADAAIAAAD+////AAADAAMAAAD///3/AAAEAAEAAAD///7/AAAEAAIAAAD/////AAAEAAMAAAAAAP3/AAAFAAEAAAAAAP7/AAAFAAIAAAAAAP//AAAFAAMAAAABAP3/AAACAAEAAAABAP7/AAACAAIAAAABAP//AAACAAMAAAACAP3/AAADAAEAAAACAP7/AAADAAIAAAACAP//AAADAAMAAAADAP3/AAAEAAEAAAADAP7/AAAEAAIAAAADAP//AAAEAAMAAAAEAP3/AAAFAAEAAAAEAP7/AAAFAAIAAAAEAP//AAAFAAMAAAAFAP3/AAACAAEAAAAFAP7/AAACAAIAAAAFAP//AAACAAMAAAAGAP3/AAADAAEAAAAGAP7/AAADAAIAAAAGAP//AAADAAMAAAAHAP3/AAAEAAEAAAAHAP7/AAAEAAIAAAAHAP//AAAEAAMAAAAIAP3/AAAFAAEAAAAIAP7/AAAFAAIAAAAIAP//AAAFAAMAAAAJAP3/AAACAAEAAAAJAP7/AAACAAIAAAAJAP//AAACAAMAAAAKAP3/AAADAAEAAAAKAP7/AAADAAIAAAAKAP//AAADAAMAAAALAP3/AAAEAAEAAAALAP7/AAAEAAIAAAALAP//AAAEAAMAAAAMAP3/AAAFAAEAAAAMAP7/AAAFAAIAAAAMAP//AAAFAAMAAAA=")
+tile_set = SubResource("TileSet_u8upw")
 
 [node name="Door" type="Sprite2D" parent="TileMapLayer/object"]
 position = Vector2(-112.66667, -41)
@@ -55,15 +239,33 @@ texture = ExtResource("2_qbuh6")
 [node name="player" parent="TileMapLayer" instance=ExtResource("3_c36q4")]
 position = Vector2(-79, -27.666666)
 
-[node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("4_7j6aw")
+[node name="CharacterBody2D" parent="TileMapLayer" instance=ExtResource("6_rv4fw")]
+position = Vector2(163.33333, -27.66667)
+scale = Vector2(0.6, 0.6)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-235.75, -98)
+[node name="CharacterBody2D2" parent="TileMapLayer" instance=ExtResource("7_d466h")]
+position = Vector2(244.66667, -37.333336)
+scale = Vector2(0.8, 0.8)
+
+[node name="npc_2" parent="TileMapLayer" instance=ExtResource("8_i1hle")]
+position = Vector2(99.66666, -27.333332)
+scale = Vector2(0.6, 0.6)
+
+[node name="nirma" parent="TileMapLayer" instance=ExtResource("9_t4w38")]
+position = Vector2(-31.666666, -25.999998)
+scale = Vector2(0.6, 0.6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapLayer"]
+position = Vector2(-78.666664, -33.333332)
+scale = Vector2(0.33333334, 0.33333334)
 shape = SubResource("RectangleShape2D_rv4fw")
 
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(47, -6)
+script = SubResource("GDScript_tumr8")
+
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(290, -228)
+position = Vector2(294, -242)
 
 [connection signal="area_exited" from="Area2D" to="Area2D" method="_on_area_exited"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

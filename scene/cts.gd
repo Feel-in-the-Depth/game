@@ -16,4 +16,4 @@ func _on_area_exited(area: Area2D) -> void:
 func _process(delta: float) -> void:
 	if entered == true:
 		if Input.is_action_just_pressed("_interact"):
-			get_tree().change_scene_to_file("res://scene/cts.gd")
+			get_tree().change_scene_to_file("res://scene/classroom.tscn")
